@@ -5,44 +5,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.projetFinalProg3D/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.projetFinalProg3D/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.projetFinalProg3D/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.projetFinalProg3D/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.projetFinalProg3D/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.projetFinalProg3D/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Playable.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Playable.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RunB.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RunB.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RunF.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RunF.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Character/Playable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Character/Playable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Character/controller.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Character/controller.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StrafeL.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StrafeL.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StrafeR.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StrafeR.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/WalkB.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/WalkB.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/WalkF.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/WalkF.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/firing rifle.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/firing rifle.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/jump backward.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/jump backward.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/jump forward.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/jump forward.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/model.fbm.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/model.fbm/Ch36_1001_Diffuse.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/model.fbm/Ch36_1001_Diffuse.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/model.fbm/Ch36_1001_Glossiness.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/model.fbm/Ch36_1001_Glossiness.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/model.fbm/Ch36_1001_Normal.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/model.fbm/Ch36_1001_Normal.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/model.fbm/Ch36_1001_Specular.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/model.fbm/Ch36_1001_Specular.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/model.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/model.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/modelController.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/modelController.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/rifle aiming idle.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/rifle aiming idle.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/walking to dying.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/walking to dying.fbx.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,14 +18,23 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Character/Playable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@7.1.8/Runtime/UniversalAdditionalCameraData.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@7.1.8/Shaders/Lit.shader" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Character/myFPSCam.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@7.1.8/Editor/MaterialUpgrader.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/MyUIManager.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Playable.cs" />
         <option value="$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@7.1.8/Runtime/UniversalAdditionalCameraData.cs" />
+        <option value="$PROJECT_DIR$/Assets/myCanvasManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/myUIManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Character/myFPSCam.cs" />
+        <option value="$PROJECT_DIR$/Assets/MyUIManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Character/Playable.cs" />
       </list>
     </option>
   </component>
@@ -72,6 +46,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -103,6 +78,7 @@
       <workItem from="1582890481723" duration="7000" />
       <workItem from="1582891250036" duration="5000" />
       <workItem from="1582978993015" duration="5332000" />
+      <workItem from="1583320728583" duration="5768000" />
     </task>
     <servers />
   </component>
@@ -111,4 +87,15 @@
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
 </project>
