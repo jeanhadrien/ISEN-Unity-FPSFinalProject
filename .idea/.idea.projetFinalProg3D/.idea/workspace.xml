@@ -3,11 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="934d8f7b-ab56-4929-8d7f-f80ab8dfbee9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.projetFinalProg3D/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.projetFinalProg3D/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.projetFinalProg3D/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.projetFinalProg3D/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.projetFinalProg3D/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.projetFinalProg3D/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Character/Playable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Character/Playable.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Character/controller.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Character/controller.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,9 +19,13 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scenes/Scene.unity" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/weaponDirection.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ShowUp.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Character/Playable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@7.1.8/Runtime/UniversalAdditionalCameraData.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@7.1.8/Shaders/Lit.shader" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/SetUITarget.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Character/myFPSCam.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@7.1.8/Editor/MaterialUpgrader.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/MyUIManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -34,7 +39,12 @@
         <option value="$PROJECT_DIR$/Assets/myUIManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Character/myFPSCam.cs" />
         <option value="$PROJECT_DIR$/Assets/MyUIManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/MyTools.cs" />
         <option value="$PROJECT_DIR$/Assets/Character/Playable.cs" />
+        <option value="$PROJECT_DIR$/Assets/weaponDirection.cs" />
+        <option value="$PROJECT_DIR$/Assets/ShowForward.cs" />
+        <option value="$PROJECT_DIR$/Assets/ShowUp.cs" />
+        <option value="$PROJECT_DIR$/Assets/SetUITarget.cs" />
       </list>
     </option>
   </component>
@@ -78,7 +88,8 @@
       <workItem from="1582890481723" duration="7000" />
       <workItem from="1582891250036" duration="5000" />
       <workItem from="1582978993015" duration="5332000" />
-      <workItem from="1583320728583" duration="5768000" />
+      <workItem from="1583320728583" duration="6154000" />
+      <workItem from="1583342368783" duration="7115000" />
     </task>
     <servers />
   </component>
@@ -92,7 +103,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
