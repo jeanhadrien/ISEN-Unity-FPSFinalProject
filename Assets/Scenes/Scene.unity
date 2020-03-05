@@ -7048,6 +7048,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minTimeBetweenBullets: 0.3
   animator: {fileID: 7472511614204321065}
+  zoomSpeed: 3.84
+  normalFOV: 60
+  zoomedFOV: 20
 --- !u!1 &4798489043217100304
 GameObject:
   m_ObjectHideFlags: 0
