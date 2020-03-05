@@ -18,6 +18,8 @@ public class FireManager : MonoBehaviour
     private float lerpTimeZoom = 0;
     public float zoomSpeed = 1;
 
+    public ParticleSystem flare, tracers;
+    public Light light;
     public float normalFOV = 60f, zoomedFOV=20f;
     void Start()
     {
@@ -26,7 +28,7 @@ public class FireManager : MonoBehaviour
 
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         
         if (Input.GetMouseButton(1))
@@ -49,8 +51,12 @@ public class FireManager : MonoBehaviour
         {
             if (_timeSinceLastBullet >= minTimeBetweenBullets)
             {
+                
                 _timeSinceLastBullet = 0;
                 // fire 
+                flare.Emit(1);
+                light.enabled = true;
+                StartCoroutine(TurnOffLightAfter(light, 0.1f));
 
             }
             else
@@ -59,5 +65,10 @@ public class FireManager : MonoBehaviour
             }
         }
     }
-    
+
+    IEnumerator TurnOffLightAfter(Light light, float time)
+    {
+        yield return time;
+        light.enabled = false;
+    }
 }

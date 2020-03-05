@@ -4,8 +4,11 @@
     <list default="true" id="934d8f7b-ab56-4929-8d7f-f80ab8dfbee9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.projetFinalProg3D/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.projetFinalProg3D/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/FireManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FireManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Playable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Playable.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponRotation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WeaponRotation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scene/Camera Profile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Scene/Camera Profile.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/UniversalRP-HighQuality.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/UniversalRP-HighQuality.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,8 +52,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/myFPSCam.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SetUITarget.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/WeaponRotation.cs" />
-        <option value="$PROJECT_DIR$/Assets/FireManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Playable.cs" />
+        <option value="$PROJECT_DIR$/Assets/FireManager.cs" />
       </list>
     </option>
   </component>
@@ -99,7 +102,7 @@
       <workItem from="1583342368783" duration="7115000" />
       <workItem from="1583400382992" duration="910000" />
       <workItem from="1583401305197" duration="9607000" />
-      <workItem from="1583411255297" duration="5850000" />
+      <workItem from="1583411255297" duration="7427000" />
     </task>
     <servers />
   </component>
