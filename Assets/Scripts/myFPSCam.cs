@@ -6,9 +6,10 @@ public class myFPSCam : MonoBehaviour
 
     private Vector2 _mouseRotation;
 
+    private Playable _playable;
+
     [SerializeField] private float sensitivity = 1.0f;
 
-    private Playable _playable;
     private void Start()
     {
         // Lock cursor
@@ -34,17 +35,13 @@ public class myFPSCam : MonoBehaviour
         _mouseRotation.y = Mathf.Clamp(_mouseRotation.y, -90f, 90f);
 
         // Rotate camera for y rotation
-        transform.Rotate(Vector3.right,-mouseRotationDelta.y);
+        transform.Rotate(Vector3.right, -mouseRotationDelta.y);
 
-
-        
         // We add x component a second time to have 2:1 sensitivity ratio, which is common in fps (cs:go, etc)
         _mouseRotation.x += mouseRotationDelta.x;
 
         // Rotate character for x rotation so is always faces forward (useless here)
         _character.transform.localRotation = Quaternion.AngleAxis(_mouseRotation.x, _character.transform.up);
-
-
 
 
         // If user wants to exit..

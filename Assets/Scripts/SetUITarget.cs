@@ -9,8 +9,8 @@ public class SetUITarget : MonoBehaviour
     public RectTransform crosshair;
     private Transform _transform;
     public Vector3 gunTargetPosition;
+
     
-    // Start is called before the first frame update
     void Start()
     {
         _camera = Camera.main;
@@ -18,12 +18,17 @@ public class SetUITarget : MonoBehaviour
         _playable = GetComponentInParent<Playable>();
     }
 
-
-    // Update is called once per frame
+    /// <summary>
+    /// Middle of the screen is the crosshair, sets the target point and updates raycasthit using raycasts 
+    /// </summary>
     void Update()
     {
         RaycastHit hit;
-        Physics.Raycast(transform.position, transform.TransformDirection(Vector3.up), out hit, Mathf.Infinity);
+        // layer mask for bullet holes 
+        int layerMask = 1 << 8;
+        layerMask = ~layerMask;
+        Physics.Raycast(transform.position, transform.TransformDirection(Vector3.up), out hit, Mathf.Infinity,
+            layerMask);
         if (hit.transform != null)
         {
             gunTargetPosition = hit.point;
@@ -32,10 +37,11 @@ public class SetUITarget : MonoBehaviour
         }
         else
         {
+            // if target is skybox, raycast doesn't register so we set target as a long distance away from camera
             gunTargetPosition = transform.position + transform.TransformDirection(Vector3.up) * 500f;
             crosshair.position = _camera.WorldToScreenPoint(gunTargetPosition);
         }
         _playable.SetGunTargetPosition(gunTargetPosition);
-        _playable.SetGunTargetCollider(hit);
+        _playable.SetGunTargetRaycastHit(hit);
     }
 }

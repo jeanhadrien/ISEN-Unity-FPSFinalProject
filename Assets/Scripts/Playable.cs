@@ -31,11 +31,9 @@ public class Playable : MonoBehaviour
     public Transform weaponIkRightHand;
     
     [NonSerialized] public bool isAiming;
-    [NonSerialized] public Vector3 gunTargetPosition;
-    [NonSerialized] public RaycastHit gunTargetCollider;
-
-
-    // Start is called before the first frame update
+    [NonSerialized] public Vector3 GunTargetPosition;
+    [NonSerialized] public RaycastHit GunTargetRaycastHit;
+    
     void Start()
     {
         _animator = GetComponent<Animator>();
@@ -46,7 +44,21 @@ public class Playable : MonoBehaviour
         _fire = GetComponent<FireManager>();
     }
 
+    void Update()
+    {
+        _horizontalInput = Input.GetAxis("Horizontal");
+        _verticalInput = Input.GetAxis("Vertical");
 
+        MovePlayer();
+        UpdateSpeed();
+        UpdateAnimationStates();
+    }
+
+
+    /// <summary>
+    /// Inverse Kinematics linking hands and weapon
+    /// </summary>
+    /// <param name="layerIndex"></param>
     private void OnAnimatorIK(int layerIndex)
     {
         if (_animator)
@@ -68,7 +80,11 @@ public class Playable : MonoBehaviour
             }
         }
     }
-
+    
+    /// <summary>
+    /// Computes and print player speed
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator UpdateVelocity()
     {
         while (true)
@@ -77,39 +93,46 @@ public class Playable : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
             var diffPosition = transform.position - oldPosition;
             var speed = Math.Abs(diffPosition.x) + Math.Abs(diffPosition.y) + Math.Abs(diffPosition.z);
-            //MyUiManager.SetTextCenter(diffPosition.ToString());
             MyUiManager.SetTextUpL(speed.ToString());
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    
+    /// <summary>
+    /// Move player in world
+    /// </summary>
+    private void MovePlayer()
     {
-        _horizontalInput = Input.GetAxis("Horizontal");
-        _verticalInput = Input.GetAxis("Vertical");
-
-
+        // get movement direction from input
+        _verticalMovement = _cameraTransform.forward * _verticalInput;
+        _verticalMovement.y = 0;
+        _horizontalMovement = _cameraTransform.right * _horizontalInput;
+        _horizontalMovement.y = 0;
+        _moveDirection = _verticalMovement + _horizontalMovement;
+        _moveDirection *= currentSpeed;
+        
+        // if running forward, add more speed to match animation
+        if (_verticalInput > 0f && !Input.GetKey("left shift")) { _verticalMovement += _cameraTransform.forward * 0.3f; }
+        
+        // jump only if grounded
         if (_characterController.isGrounded)
         {
-            _verticalMovement = _cameraTransform.forward * _verticalInput;
-            _verticalMovement.y = 0;
-            _horizontalMovement = _cameraTransform.right * _horizontalInput;
-            _horizontalMovement.y = 0;
-            if (_verticalInput > 0f)
-            {
-                _verticalMovement += _cameraTransform.forward * 0.3f;
-            }
-
-            _moveDirection = _verticalMovement + _horizontalMovement;
-            _moveDirection *= currentSpeed;
+            // jump is buggy as well
             if (Input.GetButton("Jump")) _moveDirection.y = jumpForce;
         }
 
-        _moveDirection.y -= 9.81f * Time.deltaTime;
+        // using rigidbody is buggy, so we use our own gravity
+        _moveDirection.y -= 9.81f * Time.fixedDeltaTime;
 
+        // we finally update direction
         _characterController.Move(_moveDirection * Time.deltaTime);
+    }
 
-
+    /// <summary>
+    /// Update current speed and animation states, based on shift key
+    /// </summary>
+    private void UpdateSpeed()
+    {
         if (Input.GetKey("left shift"))
         {
             _animator.SetBool(IsRunning, true);
@@ -120,8 +143,18 @@ public class Playable : MonoBehaviour
             currentSpeed = runSpeed;
             _animator.SetBool(IsRunning, false);
         }
+    }
 
-
+    /// <summary>
+    /// Update animation states based on input 
+    /// </summary>
+    void UpdateAnimationStates()
+    {
+        
+        // Player is describe as aiming only if in IDLE animation state
+        if (_animator.GetCurrentAnimatorStateInfo(0).IsName("IDLE")) { isAiming = true; }
+        else { isAiming = false; }
+        
         if (_verticalInput > 0f)
         {
             _animator.SetBool(IsMovingForward, true);
@@ -154,25 +187,15 @@ public class Playable : MonoBehaviour
             _animator.SetBool(IsMovingLeft, true);
         }
 
-
-        if (_animator.GetCurrentAnimatorStateInfo(0).IsName("IDLE"))
-        {
-            isAiming = true;
-        }
-        else
-        {
-            isAiming = false;
-        }
-
     }
 
     public void SetGunTargetPosition(Vector3 pos)
     {
-        gunTargetPosition = pos;
+        GunTargetPosition = pos;
     }
 
-    public void SetGunTargetCollider(RaycastHit hit)
+    public void SetGunTargetRaycastHit(RaycastHit hit)
     {
-        gunTargetCollider = hit;
+        GunTargetRaycastHit = hit;
     }
 }
