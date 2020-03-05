@@ -1,9 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UIElements;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MyUIManager : MonoBehaviour
+public class MyUiManager : MonoBehaviour
 {
     // Start is called before the first frame update
     public static Text UpL, UpR, Center;

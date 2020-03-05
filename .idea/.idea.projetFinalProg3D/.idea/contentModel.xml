@@ -14,8 +14,9 @@
         <e p="Scripts" t="Include">
           <e p="SimpleCameraController.cs" t="Include" />
         </e>
+        <e p="SetParentAtRuntime.cs" t="Include" />
         <e p="SetUITarget.cs" t="Include" />
-        <e p="ShowUp.cs" t="Include" />
+        <e p="ShowAxis.cs" t="Include" />
         <e p="Weapon.cs" t="Include" />
         <e p="weaponDirection.cs" t="Include" />
       </e>

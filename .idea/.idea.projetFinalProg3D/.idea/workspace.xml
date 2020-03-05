@@ -5,10 +5,12 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.projetFinalProg3D/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.projetFinalProg3D/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.projetFinalProg3D/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.projetFinalProg3D/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Character/Playable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Character/Playable.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Character/controller.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Character/controller.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Character/myFPSCam.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Character/myFPSCam.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MyUIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MyUIManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SetUITarget.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SetUITarget.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ShowUp.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ShowUp.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,16 +21,17 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scenes/Scene.unity" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/weaponDirection.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/ShowUp.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/SetParentAtRuntime.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Character/Playable.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@7.1.8/Runtime/UniversalAdditionalCameraData.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@7.1.8/Shaders/Lit.shader" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/SetUITarget.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Character/myFPSCam.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scenes/Scene.unity" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/weaponDirection.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ShowAxis.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@7.1.8/Runtime/UniversalAdditionalCameraData.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@7.1.8/Editor/MaterialUpgrader.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/MyUIManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/MyUiManager.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -37,14 +40,17 @@
         <option value="$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@7.1.8/Runtime/UniversalAdditionalCameraData.cs" />
         <option value="$PROJECT_DIR$/Assets/myCanvasManager.cs" />
         <option value="$PROJECT_DIR$/Assets/myUIManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Character/myFPSCam.cs" />
-        <option value="$PROJECT_DIR$/Assets/MyUIManager.cs" />
         <option value="$PROJECT_DIR$/Assets/MyTools.cs" />
-        <option value="$PROJECT_DIR$/Assets/Character/Playable.cs" />
         <option value="$PROJECT_DIR$/Assets/weaponDirection.cs" />
-        <option value="$PROJECT_DIR$/Assets/ShowForward.cs" />
+        <option value="$PROJECT_DIR$/Assets/MyUIManager.cs" />
         <option value="$PROJECT_DIR$/Assets/ShowUp.cs" />
+        <option value="$PROJECT_DIR$/Assets/MyUiManager.cs" />
         <option value="$PROJECT_DIR$/Assets/SetUITarget.cs" />
+        <option value="$PROJECT_DIR$/Assets/SetParentAtRuntime.cs" />
+        <option value="$PROJECT_DIR$/Assets/ShowForward.cs" />
+        <option value="$PROJECT_DIR$/Assets/ShowAxis.cs" />
+        <option value="$PROJECT_DIR$/Assets/Character/myFPSCam.cs" />
+        <option value="$PROJECT_DIR$/Assets/Character/Playable.cs" />
       </list>
     </option>
   </component>
@@ -90,6 +96,8 @@
       <workItem from="1582978993015" duration="5332000" />
       <workItem from="1583320728583" duration="6154000" />
       <workItem from="1583342368783" duration="7115000" />
+      <workItem from="1583400382992" duration="910000" />
+      <workItem from="1583401305197" duration="4684000" />
     </task>
     <servers />
   </component>
@@ -110,5 +118,15 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="691" y="243" key="RiderGenerateDialog" timestamp="1583401023278">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="691" y="243" key="RiderGenerateDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1583401023278" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1583405942813">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1583405942813" />
   </component>
 </project>

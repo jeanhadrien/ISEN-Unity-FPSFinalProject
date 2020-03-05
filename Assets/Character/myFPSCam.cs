@@ -7,7 +7,6 @@ public class myFPSCam : MonoBehaviour
     private Vector2 _mouseRotation;
 
     [SerializeField] private float sensitivity = 1.0f;
-    [SerializeField] private float bodyRotationOffset = 1.0f;
 
     private void Start()
     {
@@ -15,7 +14,6 @@ public class myFPSCam : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Application.targetFrameRate = 120;
         _character = transform.parent.gameObject;
-        transform.Rotate(Vector3.up,bodyRotationOffset);
     }
 
     // Update is called once per frame
