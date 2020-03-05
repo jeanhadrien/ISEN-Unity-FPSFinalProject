@@ -6,6 +6,7 @@
     <e p="C:\Users\jhdam\Desktop\projetFinalProg3D" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="FireManager.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="myFPSCam.cs" t="Include" />
           <e p="myUIManager.cs" t="Include" />

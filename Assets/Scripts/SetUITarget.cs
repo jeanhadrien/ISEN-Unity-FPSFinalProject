@@ -36,5 +36,6 @@ public class SetUITarget : MonoBehaviour
             crosshair.position = _camera.WorldToScreenPoint(gunTargetPosition);
         }
         _playable.SetGunTargetPosition(gunTargetPosition);
+        _playable.SetGunTargetCollider(hit);
     }
 }
