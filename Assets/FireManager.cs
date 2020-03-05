@@ -14,12 +14,14 @@ public class FireManager : MonoBehaviour
     private bool isAiming;
     private bool firing;
 
+    private Playable _playable;
     private float lerpTimeZoom = 0;
     public float zoomSpeed = 1;
 
     public float normalFOV = 60f, zoomedFOV=20f;
     void Start()
     {
+        _playable = GetComponent<Playable>();
     }
 
 
@@ -43,7 +45,7 @@ public class FireManager : MonoBehaviour
         
         _timeSinceLastBullet += Time.deltaTime;
         
-        if (Input.GetMouseButton(0) && isAiming)
+        if (Input.GetMouseButton(0) && _playable.isAiming)
         {
             if (_timeSinceLastBullet >= minTimeBetweenBullets)
             {
@@ -57,9 +59,5 @@ public class FireManager : MonoBehaviour
             }
         }
     }
-
-    public void SetAiming(bool zz)
-    {
-        isAiming = zz;
-    }
+    
 }

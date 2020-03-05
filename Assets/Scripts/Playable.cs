@@ -9,27 +9,30 @@ public class Playable : MonoBehaviour
     private Animator _animator;
     private CharacterController _characterController;
     private float _horizontalInput, _verticalInput;
+    
     private static readonly int IsMovingForward = Animator.StringToHash("isMovingForward");
     private static readonly int IsMovingBackwards = Animator.StringToHash("isMovingBackwards");
     private static readonly int IsMovingRight = Animator.StringToHash("isMovingRight");
     private static readonly int IsMovingLeft = Animator.StringToHash("isMovingLeft");
     private static readonly int IsRunning = Animator.StringToHash("isRunning");
-
-    public RaycastHit gunTargetCollider;
-    public Vector3 gunTargetPosition;
+    
+    private float currentSpeed;
     private Vector3 _horizontalMovement, _verticalMovement;
-
-    private Vector3 _moveDirection = Vector3.zero;
-    public float runSpeed = 6.0f;
-    public float walkSpeed = 5;
-    public float currentSpeed;
     private Transform _cameraTransform;
-    public float jumpSpeed = 8.0f;
+    private Vector3 _moveDirection = Vector3.zero;
+    private FireManager _fire;
+
+    
+    public float runSpeed = 6.0f;
+    public float walkSpeed = 5f;
+    public float jumpForce = 8.0f;
+    
     public Transform weaponIkLeftHand;
     public Transform weaponIkRightHand;
-    public bool isAiming;
-
-    private FireManager _fire;
+    
+    [NonSerialized] public bool isAiming;
+    [NonSerialized] public Vector3 gunTargetPosition;
+    [NonSerialized] public RaycastHit gunTargetCollider;
 
 
     // Start is called before the first frame update
@@ -99,7 +102,7 @@ public class Playable : MonoBehaviour
 
             _moveDirection = _verticalMovement + _horizontalMovement;
             _moveDirection *= currentSpeed;
-            if (Input.GetButton("Jump")) _moveDirection.y = jumpSpeed;
+            if (Input.GetButton("Jump")) _moveDirection.y = jumpForce;
         }
 
         _moveDirection.y -= 9.81f * Time.deltaTime;
@@ -161,7 +164,6 @@ public class Playable : MonoBehaviour
             isAiming = false;
         }
 
-        _fire.SetAiming(isAiming);
     }
 
     public void SetGunTargetPosition(Vector3 pos)

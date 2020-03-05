@@ -21,8 +21,7 @@ public class WeaponRotation : MonoBehaviour
             transform.LookAt(transform.position+Camera.main.transform.forward);
             transform.Rotate(Vector3.up,90f);
         }
-
-
+        
 
     }
 }
