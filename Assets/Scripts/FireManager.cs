@@ -52,8 +52,21 @@ public class FireManager : MonoBehaviour
             flare.Emit(1);
             myLight.enabled = true;
             StartCoroutine(TurnOffLightAfter(myLight, 0.1f));
-            Instantiate(bulletHole, _playable.GunTargetRaycastHit.point + (_playable.GunTargetRaycastHit.normal * 0.0001f),
-                Quaternion.FromToRotation (Vector3.up, _playable.GunTargetRaycastHit.normal));
+            if (_playable.GunTargetRaycastHit.collider != null)
+            {
+                var bullet = Instantiate(bulletHole, _playable.GunTargetRaycastHit.point + (_playable.GunTargetRaycastHit.normal * 0.0001f),
+                    Quaternion.FromToRotation (Vector3.up, _playable.GunTargetRaycastHit.normal));
+                bullet.transform.SetParent(_playable.GunTargetRaycastHit.collider.transform.parent);
+
+                EnemyBehaviour eb = _playable.GunTargetRaycastHit.collider.gameObject.GetComponent<EnemyBehaviour>();
+                if (eb)
+                {
+                    eb.Hit();
+                }
+            }
+
+            
+
         }
     }
 

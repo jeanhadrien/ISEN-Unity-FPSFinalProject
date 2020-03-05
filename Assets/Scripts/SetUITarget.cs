@@ -29,6 +29,7 @@ public class SetUITarget : MonoBehaviour
         layerMask = ~layerMask;
         Physics.Raycast(transform.position, transform.TransformDirection(Vector3.up), out hit, Mathf.Infinity,
             layerMask);
+        if(hit.collider != null) MyUiManager.SetTextUpR(hit.collider.gameObject.name);
         if (hit.transform != null)
         {
             gunTargetPosition = hit.point;
