@@ -8,12 +8,14 @@ public class myFPSCam : MonoBehaviour
 
     [SerializeField] private float sensitivity = 1.0f;
 
+    private Playable _playable;
     private void Start()
     {
         // Lock cursor
         Cursor.lockState = CursorLockMode.Locked;
         Application.targetFrameRate = 120;
         _character = transform.parent.gameObject;
+        _playable = GetComponentInParent<Playable>();
     }
 
     // Update is called once per frame
@@ -43,7 +45,8 @@ public class myFPSCam : MonoBehaviour
         _character.transform.localRotation = Quaternion.AngleAxis(_mouseRotation.x, _character.transform.up);
 
 
-        
+
+
         // If user wants to exit..
         if (Input.GetKeyDown("escape"))
             // .. we release the cursor

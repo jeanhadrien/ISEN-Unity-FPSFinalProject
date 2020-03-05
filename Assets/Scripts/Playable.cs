@@ -14,8 +14,8 @@ public class Playable : MonoBehaviour
     private static readonly int IsMovingRight = Animator.StringToHash("isMovingRight");
     private static readonly int IsMovingLeft = Animator.StringToHash("isMovingLeft");
     private static readonly int IsRunning = Animator.StringToHash("isRunning");
-    
 
+    public Vector3 _gunTargetPosition;
     private Vector3 _horizontalMovement, _verticalMovement;
 
     private Vector3 _moveDirection = Vector3.zero;
@@ -26,8 +26,9 @@ public class Playable : MonoBehaviour
     public float jumpSpeed = 8.0f;
     public Transform weaponIkLeftHand;
     public Transform weaponIkRightHand;
-    
-    
+    public bool isAiming;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,7 +36,7 @@ public class Playable : MonoBehaviour
         _animator = GetComponent<Animator>();
         _characterController = GetComponent<CharacterController>();
         StartCoroutine(UpdateVelocity());
-        _cameraTransform = GetComponentInChildren<Camera>().gameObject.transform;
+        _cameraTransform = Camera.main.transform;
         currentSpeed = walkSpeed;
     }
 
@@ -77,10 +78,17 @@ public class Playable : MonoBehaviour
         _horizontalInput = Input.GetAxis("Horizontal");
         _verticalInput = Input.GetAxis("Vertical");
         
+        
         if (_characterController.isGrounded)
         {
             _verticalMovement = _cameraTransform.forward * _verticalInput;
+            _verticalMovement.y = 0;
             _horizontalMovement = _cameraTransform.right * _horizontalInput;
+            _horizontalMovement.y = 0;
+            if (_verticalInput > 0f)
+            {
+                _verticalMovement += _cameraTransform.forward * 0.3f;
+            }
             _moveDirection = _verticalMovement + _horizontalMovement;
             _moveDirection *= currentSpeed;
             if (Input.GetButton("Jump")) _moveDirection.y = jumpSpeed;
@@ -137,7 +145,19 @@ public class Playable : MonoBehaviour
 
         if (_animator.GetCurrentAnimatorStateInfo(0).IsName("IDLE"))
         {
-            
+            isAiming = true;
         }
+        else
+        {
+            isAiming = false;
+        }
+        
+        
+        
+    }
+
+    public void SetGunTargetPosition(Vector3 pos)
+    {
+        _gunTargetPosition = pos;
     }
 }

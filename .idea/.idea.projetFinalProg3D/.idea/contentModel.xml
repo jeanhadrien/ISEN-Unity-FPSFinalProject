@@ -6,19 +6,18 @@
     <e p="C:\Users\jhdam\Desktop\projetFinalProg3D" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="Character" t="Include">
-          <e p="myFPSCam.cs" t="Include" />
-          <e p="Playable.cs" t="Include" />
-        </e>
-        <e p="myUIManager.cs" t="Include" />
         <e p="Scripts" t="Include">
+          <e p="myFPSCam.cs" t="Include" />
+          <e p="myUIManager.cs" t="Include" />
+          <e p="Playable.cs" t="Include" />
+          <e p="SetParentAtRuntime.cs" t="Include" />
+          <e p="SetUITarget.cs" t="Include" />
+          <e p="ShowAxis.cs" t="Include" />
           <e p="SimpleCameraController.cs" t="Include" />
+          <e p="SmoothMovementTarget.cs" t="Include" />
+          <e p="Weapon.cs" t="Include" />
+          <e p="WeaponRotation.cs" t="Include" />
         </e>
-        <e p="SetParentAtRuntime.cs" t="Include" />
-        <e p="SetUITarget.cs" t="Include" />
-        <e p="ShowAxis.cs" t="Include" />
-        <e p="Weapon.cs" t="Include" />
-        <e p="weaponDirection.cs" t="Include" />
       </e>
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
